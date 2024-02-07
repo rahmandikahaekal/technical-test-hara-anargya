@@ -1,9 +1,11 @@
 <template>
-  <div class="flex h-screen" id="app">
-    <Sidebar />
-    <div class="flex flex-col flex-1">
+  <div class="flex h-screen overflow-hidden" id="app">
+    <div class="overflow-x-hidden">
+      <Sidebar />
+    </div>
+    <div class="flex flex-col flex-1 overflow-hidden">
       <Navigation />
-      <div class="bg-[#f7f8fa] flex-1 overflow-hidden">
+      <div class="bg-[#f7f8fa] flex-1 overflow-y-auto">
         <RouterView />
       </div>
     </div>
