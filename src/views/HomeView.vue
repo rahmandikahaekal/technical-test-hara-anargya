@@ -92,14 +92,42 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-row mt-8">
-      test
+    <div class="flex flex-row my-8">
+      <Table :data="tableData" />
     </div>
   </div>
 </template>
 
 <script>
+import Table from "../components/Table.vue";
+
 export default {
+  components: {
+    Table
+  },
+  data() {
+    return {
+      tableData: [],
+    };
+  },
+  mounted () {
+    this.fetchData();
+  },
+  methods: {
+    async fetchData() {
+      try {
+        const response = await fetch('https://api.slingacademy.com/v1/sample-data/users');
+        if (response.ok) {
+          const data = await response.json();
+          this.tableData = data.users;
+        } else {
+          console.error('Error fetching data:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    },
+  }
 }
 </script>
 
