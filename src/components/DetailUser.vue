@@ -1,12 +1,12 @@
 <template>
   <transition name="fade">
     <div v-if="isVisible" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div class="bg-white p-8 rounded shadow-md relative">
+      <div class="w-[500px] bg-white p-8 rounded shadow-md relative">
         <button @click="closeModal" class="bg-red-500 hover:bg-red-700 transition duration-300 text-white rounded p-2 absolute right-5 top-5">
           <Icon icon="solar:close-square-linear" class="text-2xl" />
         </button>
 
-        <div class="flex justify-center mb-2">
+        <div class="flex mb-2">
           <img :src="selectedUser.profile_picture" class="w-20 h-20 object-cover rounded-full mr-4" />
           <div>
             <h2 class="text-2xl font-bold mb-4">
@@ -19,7 +19,7 @@
 
         <div class="flex flex-row">
           <div class="basis-2/5 flex flex-col pr-2">
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 Date Of Birth
               </span>
@@ -27,7 +27,7 @@
                 :
               </span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 Gender
               </span>
@@ -35,7 +35,7 @@
                 :
               </span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 Job
               </span>
@@ -43,7 +43,7 @@
                 :
               </span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 Address
               </span>
@@ -52,7 +52,7 @@
               </span>
             </div>
             
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 City
               </span>
@@ -60,7 +60,7 @@
                 :
               </span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 State
               </span>
@@ -68,7 +68,7 @@
                 :
               </span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between pb-2">
               <span>
                 Country
               </span>
@@ -78,25 +78,25 @@
             </div>
           </div>
           <div class="basis-3/5">
-            <div>
+            <div class="pb-2">
               {{ formatDate(selectedUser.date_of_birth) }}
             </div>
-            <div>
+            <div class="pb-2">
               {{ selectedUser.gender }}
             </div>
-            <div>
+            <div class="pb-2">
               {{ selectedUser.job }}
             </div>
-            <div>
+            <div class="pb-2">
               {{ selectedUser.street }}
             </div>
-            <div>
+            <div class="pb-2">
               {{ selectedUser.city }}, {{ selectedUser.zipcode }}
             </div>
-            <div>
+            <div class="pb-2">
               {{ selectedUser.state }}
             </div>
-            <div>
+            <div class="pb-2">
               {{ selectedUser.country }}
             </div>
           </div>

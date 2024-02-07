@@ -6,7 +6,7 @@
     <table class="w-full bg-white rounded-b-[20px]">
       <thead class="bg-[#fafbfc] text-zinc-400">
         <tr>
-          <th class="font-medium text-center py-4 px-2 border-b">ID</th>
+          <th class="font-medium text-center py-4 px-3 border-b">ID</th>
           <th class="font-medium text-left py-4 px-4 border-b">User</th>
           <th class="font-medium text-left py-4 px-4 border-b">Date Of Birth</th>
           <th class="font-medium text-left py-4 px-4 border-b">Email</th>
@@ -17,7 +17,7 @@
       </thead>
       <tbody>
         <tr v-for="item in data" :key="item.id">
-          <td class="text-center py-2 px-2 border-b">
+          <td class="text-center py-2 px-3 border-b">
             {{ item.id }}
           </td>
           <td class="font-semibold text-left py-2 px-4 border-b">
