@@ -18,7 +18,7 @@
           </td>
           <td class="font-semibold text-left py-2 px-4 border-b">
             <span class="flex items-center">
-              {{ item.name }}
+              {{ setNamaProvince(item) }}
             </span>  
           </td>
           <td class="font-semibold text-left py-2 px-4 border-b">
@@ -73,14 +73,11 @@ export default {
         this.closeModal();
       }
     },
-    setNama (data) {
-      const first_name = data.first_name
-      const last_name = data.last_name
-      return first_name + ' ' + last_name
+    setNamaProvince (data) {
+      const name = data.name
+      return name
     },
     openModal (userData) {
-      console.log('open')
-      console.log('userdata', userData)
       this.selectedDetailProvince = userData;
       this.viewDetailProvince = true;
     },
