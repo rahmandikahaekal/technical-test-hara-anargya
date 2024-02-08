@@ -1,12 +1,12 @@
 <template>
-  <div class="container mx-auto px-8 mt-8">
+  <div class="container mx-auto px-8 my-8">
     <Table :data="tableData" />
   </div>
 </template>
 
 <script>
 import Table from "../components/TableProvince.vue";
-import provinces from '../province.js';
+import provinces from '../assets/js/province';
 
 export default {
   components: {
