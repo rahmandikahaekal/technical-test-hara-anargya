@@ -2,7 +2,7 @@
   <transition name="fade">
     <div v-if="isVisible" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
       <div class="w-[500px] bg-white p-8 rounded shadow-md relative">
-        <button @click="closeModal" class="bg-red-500 hover:bg-red-700 transition duration-300 text-white rounded p-2 absolute right-5 top-5">
+        <button @click="closeModal" class="bg-red-500 hover:bg-red-700 transition duration-300 text-white rounded p-2 absolute right-8">
           <Icon icon="solar:close-square-linear" class="text-2xl" />
         </button>
 

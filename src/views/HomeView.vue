@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import Table from "../components/Table.vue";
+import Table from "../components/TableUsers.vue";
 
 export default {
   components: {
